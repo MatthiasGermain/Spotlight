@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+@font-face {
+    font-family: 'AvenirLTStd-Black';
+    src: url('AvenirLTStd-Black.woff2') format('woff2'),
+         url('AvenirLTStd-Black.woff') format('woff'); /* Ajout d'un fallback */
+    font-weight: bold;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden; /* Empêche le défilement */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: url('imgfond.png') no-repeat center center/cover;
+    background-size: cover; /* Assure que l'image de fond couvre toute la zone */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff; /* Texte en blanc */
+}
+
+.logo {
+    position: absolute;
+    top: -8%; /* Fait dépasser un peu le logo */
+    left: 10px;
+    width: 20%;
+    filter: invert(1); /* Assure que le logo SVG blanc reste visible */
+    transition: top 0.3s ease, width 0.3s ease; /* Animation pour la réactivité */
+}
+
+.container {
+    margin-top: 10%;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'AvenirLTStd-Black', sans-serif;
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+    margin-top: -35%;
+}
+
+p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    line-height: 1.5; /* Améliore la lisibilité du texte */
+}
+
+.bordered-text {
+    border: 1px solid #ffffff; /* Bordure blanche */
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding-bottom: 5%;
+    font-size: 1.2rem;
+}
+
+footer p {
+    margin-right: 5px;
+}
+
+footer a {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+    gap: 5px; /* Espacement entre l'icône et le texte */
+    font-weight: bold; /* Renforcer la lisibilité */
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer span {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.icon {
+    width: 20px; /* Ajustez la taille des icônes */
+    height: 20px;
+    transition: transform 0.3s ease; /* Animation de transformation */
+}
+
+footer a:hover .icon {
+    transform: scale(1.2); /* Effet de survol pour agrandir les icônes */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 25%;
+        top: -10%; /* Adapte la position */
+    }
+
+    h1 {
+        font-size: 3rem; /* Taille réduite pour les titres */
+    }
+
+    .bordered-text {
+        font-size: 1.2rem;
+        padding: 8px 15px;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        margin-top: 20%;
+    }
+
+    footer {
+        width: 100%;
+        text-align: center;
+        padding: 1.5rem 0;
+        font-size: 1rem;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    footer p {
+        font-weight: bold;
+        margin-right: 5px;
+    }
+
+    footer a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+
+    footer span {
+        color: #ffffff;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        width: 30%;
+        top: -2.5%; /* Adapte encore plus la position */
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Taille réduite pour les très petits écrans */
+        text-align: center;
+    }
+
+    .bordered-text {
+        font-size: 1rem;
+        padding: 5% 10%;
+    }
+
+    p {
+        font-size: 1rem;
+        padding: 0 5%; /* Ajoute un peu d'espace sur les côtés */
+        margin: 5%;
+    }
+
+    .container {
+        margin-top: 25%;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}
